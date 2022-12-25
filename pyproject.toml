@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "arabic-web-scraper"
+version = "0.1.0"
+description = ""
+authors = ["Arthur Nunes <arthurnunesc@proton.me>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+beautifulsoup4 = "^4.11.1"
+requests = "^2.28.1"
+arabic-reshaper = "^2.1.4"
+python-bidi = "^0.4.2"
+PyArabic = "^0.6.12"
+
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
