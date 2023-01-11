@@ -1,9 +1,5 @@
-from random import betavariate
-from time import clock_settime
 from bs4 import BeautifulSoup
 import requests
-import os
-import sys
 import arabic_reshaper
 from bidi.algorithm import get_display
 import pyarabic.araby as araby
