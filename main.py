@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
 import requests
-import arabic_reshaper
 from bidi.algorithm import get_display
 import pyarabic.araby as araby
 
@@ -21,7 +20,7 @@ word_pronunciation = soup.select_one("div.word-phonetic.phonetic").get_text()
 word_in_arabic_with_diacritics = word
 word_in_arabic_without_diacritics = araby.strip_diacritics(word)
 word_in_arabic_with_diacritics_inverted = get_display(word)
-word_in_arabic_without_diacritics_inverted = arabic_reshaper.reshape(get_display((word_in_arabic_without_diacritics)))
+word_in_arabic_without_diacritics_inverted = get_display((word_in_arabic_without_diacritics))
 
 # Fetches word meaning and declension and separates them in two variables
 word_meaning_and_declension = soup.select_one("div.word-declension-info-text").small.get_text()

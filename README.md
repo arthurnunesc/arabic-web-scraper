@@ -25,10 +25,9 @@ Python web-scraper written for the [Arabic.fi](https://arabic.fi/) website. It f
   - Used to fetch all the information from the page's HTML.
 - Bidi Algorithm
   - Changes string encoding to UTF-8, inverting the text as needed.
-- Arabic Reshaper
-  - After changing encoding, changes character forms to fit their positions in words.
 - PyArabic
   - Used to strip diacritics from the arabic words.
+  
 
 ## To-do
 
