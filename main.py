@@ -4,9 +4,6 @@ from bidi.algorithm import get_display
 import pyarabic.araby as araby
 
 
-def formatArabicSentences(sentences):
-   return sentences
-
 url_word = 'https://arabic.fi/words/322'
 url_verb = 'https://arabic.fi/words/1027'
 url_random = 'https://arabic.fi/random-word'
@@ -14,13 +11,11 @@ url_random = 'https://arabic.fi/random-word'
 resp = requests.get(url_word)
 soup = BeautifulSoup(resp.text, 'html.parser')
 
-word = soup.select_one("div.word-arabic.arabic.arabic-large").get_text()
-word_pronunciation = soup.select_one("div.word-phonetic.phonetic").get_text()
-
-word_in_arabic_with_diacritics = word
-word_in_arabic_without_diacritics = araby.strip_diacritics(word)
-word_in_arabic_with_diacritics_inverted = get_display(word)
+word_in_arabic_with_diacritics = soup.select_one("div.word-arabic.arabic.arabic-large").get_text()
+word_in_arabic_without_diacritics = araby.strip_diacritics(word_in_arabic_with_diacritics)
+word_in_arabic_with_diacritics_inverted = get_display(word_in_arabic_with_diacritics)
 word_in_arabic_without_diacritics_inverted = get_display((word_in_arabic_without_diacritics))
+word_pronunciation = soup.select_one("div.word-phonetic.phonetic").get_text()
 
 # Fetches word meaning and declension and separates them in two variables
 word_meaning_and_declension = soup.select_one("div.word-declension-info-text").small.get_text()
@@ -54,19 +49,11 @@ print(word_pattern)
 # Gets word link
 word_arabicfi_link = soup.find("link")["href"]
 
-# word_conjugations
-
 # Checks if the word has a context sentence
 if "Using the word" in str(soup.find("h2")):
    has_context_sentence = True
 else:
    has_context_sentence = False
-
-# context_meanings
-
-# context_audios
-
-# image
 
 # Printing everything on the terminal
 print("arabic without diacritics:            ", word_in_arabic_without_diacritics)

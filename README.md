@@ -27,10 +27,11 @@ Python web-scraper written for the [Arabic.fi](https://arabic.fi/) website. It f
   - Changes string encoding to UTF-8, inverting the text as needed.
 - PyArabic
   - Used to strip diacritics from the arabic words.
-  
+
 
 ## To-do
 
+- Add word conjugations fetch
 - Add context sentence fetch
 - Add context meaning fetch
 - Add context audio fetch
