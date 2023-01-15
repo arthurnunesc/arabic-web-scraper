@@ -31,20 +31,17 @@ else:
 
 # Fetches word part of speech and pattern
 word_part_of_speech_and_pattern = soup.select_one("div.similar-info")
-print(word_part_of_speech_and_pattern)
+
 # Parses part of speech from the variable containing it and the pattern
 word_part_of_speech = word_part_of_speech_and_pattern.get_text().split(". ")
 word_part_of_speech = word_part_of_speech[0].split(": ")
 word_part_of_speech = word_part_of_speech[1]
-print(word_part_of_speech)
 
 # Checks if word pattern was fetched, if not, assigns "no pattern" to its variable
 if "Pattern: " in  str(word_part_of_speech_and_pattern):
    word_pattern = word_part_of_speech_and_pattern.select_one("a").get_text()
 else:
    word_pattern = "no pattern"
-
-print(word_pattern)
 
 # Gets word link
 word_arabicfi_link = soup.find("link")["href"]
@@ -58,8 +55,8 @@ else:
 # Printing everything on the terminal
 print("arabic without diacritics:            ", word_in_arabic_without_diacritics)
 print("arabic with diacritics:               ", word_in_arabic_with_diacritics)
-print("arabic without diacritics(inverted):  ", word_in_arabic_without_diacritics_inverted)
-print("arabic with diacritics(inverted):     ", word_in_arabic_with_diacritics_inverted)
+# print("arabic without diacritics(inverted):  ", word_in_arabic_without_diacritics_inverted)
+# print("arabic with diacritics(inverted):     ", word_in_arabic_with_diacritics_inverted)
 print("pronunciation:                        ", word_pronunciation)
 print("meaning:                              ", word_meaning)
 print("declension:                           ", word_declension)
