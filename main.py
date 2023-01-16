@@ -8,7 +8,7 @@ url_word = 'https://arabic.fi/words/322'
 url_verb = 'https://arabic.fi/words/1027'
 url_random = 'https://arabic.fi/random-word'
 
-resp = requests.get(url_word)
+resp = requests.get(url_random)
 soup = BeautifulSoup(resp.text, 'html.parser')
 
 word_in_arabic_with_diacritics = soup.select_one("div.word-arabic.arabic.arabic-large").get_text()
@@ -54,13 +54,13 @@ else:
 
 # Printing everything on the terminal
 print("arabic without diacritics:            ", word_in_arabic_without_diacritics)
-print("arabic with diacritics:               ", word_in_arabic_with_diacritics)
-# print("arabic without diacritics(inverted):  ", word_in_arabic_without_diacritics_inverted)
+# print("arabic with diacritics:               ", word_in_arabic_with_diacritics)
+print("arabic without diacritics(inverted):  ", word_in_arabic_without_diacritics_inverted)
 # print("arabic with diacritics(inverted):     ", word_in_arabic_with_diacritics_inverted)
 print("pronunciation:                        ", word_pronunciation)
 print("meaning:                              ", word_meaning)
 print("declension:                           ", word_declension)
 print("audio link:                           ", word_audio)
 print("part of speech:                       ", word_part_of_speech)
-print("pattern:                              ", word_pattern)
+print("pattern:                              ", word_pattern) 
 print("arabic.fi link:                       ", word_arabicfi_link)

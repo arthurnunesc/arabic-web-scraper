@@ -17,7 +17,7 @@ Python web-scraper written for the [Arabic.fi](https://arabic.fi/) website. It f
 ## Features and caveats
 
 - It also stores the inverted words in arabic, as not all terminals support RTL text.
-- Because its main purpose was to compile the information to make the flashcards and not to show them in the terminal, most terminals will not show the words in the arabic script properly even when using the UTF-8 variable. The way I made them show up as they should on my terminal was using Gnome Terminal and the Kawkab Mono font. It should also be noted that I do not having BiDi installed in my terminal as that may alter your results.
+- Because its main purpose was to compile the information to make the flashcards and not to show them in the terminal, most terminals will not show the words in the Arabic script properly even when using the inverted variable. The way I made them get displayed as they should on my terminal was using Gnome Terminal and an Monospace font that support Arabic characters(Ex: Kawkab Mono, DejaVu Sans Mono, Thabit, Courier New). It should also be noted that I am not using BiDi/BiCon as that may alter your results.
 
 ## Libraries used
 
