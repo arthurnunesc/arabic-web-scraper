@@ -44,7 +44,10 @@ def get_word_info(url_number, invert_strings=False):
         word_audio = "no word audio"
 
     # Fetches word part of speech and pattern
-    word_part_of_speech_and_pattern = soup.select_one("div.similar-info")
+    word_part_of_speech_and_pattern = soup.select("div.similar-info")
+    # Checks if we really have the right information and not the "Category" part of the word
+    if len(word_part_of_speech_and_pattern) > 1:
+        word_part_of_speech_and_pattern = word_part_of_speech_and_pattern[1]
 
     # Parses part of speech from the variable containing it and the pattern
     word_part_of_speech = word_part_of_speech_and_pattern.get_text().split(". ")
