@@ -41,7 +41,7 @@ def add_one_record(word_info):
     c = connection.cursor()
 
     c.execute(
-        "INSERT OR IGNORE INTO words(rowid, in_arabic, in_arabic_wo_diacritics, pronunciation,meaning,declension,audio,part_of_speech,pattern,arabicfi_link) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+        "INSERT OR IGNORE INTO words(rowid,in_arabic,in_arabic_wo_diacritics,pronunciation,meaning,declension,audio,part_of_speech,pattern,arabicfi_link) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
         word_info,
     )
 
@@ -54,8 +54,8 @@ def add_many_records(list):
     c = connection.cursor()
 
     c.executemany(
-        "INSERT INTO words(rowid, in_arabic, in_arabic_wo_diacritics, pronunciation,meaning,declension,audio,part_of_speech,pattern,arabicfi_link) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-        list,
+        "INSERT OR IGNORE INTO words(rowid,in_arabic,in_arabic_wo_diacritics,pronunciation,meaning,declension,audio,part_of_speech,pattern,arabicfi_link) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+        (list),
     )
 
     connection.commit()
