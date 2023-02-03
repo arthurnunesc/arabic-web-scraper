@@ -1,4 +1,4 @@
-# anki-web-scraper
+# arabic-web-scraper
 
 Python web-scraper written for the [Arabic.fi](https://arabic.fi/) website. It fetches information from words through the [random word link](https://arabic.fi/random-word) provided by the website.
 
