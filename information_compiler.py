@@ -20,30 +20,30 @@ import time
 # arabicfi_database.add_one_record(word_322)
 # arabicfi_database.add_one_record(word_512)
 
-# get the start time
-st = time.time()
+# # get the start time
+# st = time.time()
 
-list = []
+# list = []
 
-for number in range(2599, 3338):
-    print(f"Finding word number {number}")
-    if arabicfi_scraper.get_word_info(number):
-        print("Word found")
-        list.append(arabicfi_scraper.get_word_info(number))
+# for number in range(2599, 3338):
+#     print(f"Finding word number {number}")
+#     if arabicfi_scraper.get_word_info(number):
+#         print("Word found")
+#         list.append(arabicfi_scraper.get_word_info(number))
 
-arabicfi_database.add_many_records(list)
-arabicfi_database.print_full_table_per_row()
+# arabicfi_database.add_many_records(list)
+# arabicfi_database.print_full_table_per_row()
 
-# get the end time
-et = time.time()
+# # get the end time
+# et = time.time()
 
-# get the execution time
-elapsed_time = et - st
-print("Execution time:", elapsed_time, "seconds")
+# # get the execution time
+# elapsed_time = et - st
+# print("Execution time:", elapsed_time, "seconds")
 
-# # For DEBUGGING
-# word = arabicfi_scraper.get_word_info(2599)
-# print(word)
+# For DEBUGGING
+word = arabicfi_scraper.get_word_info(3338)
+print(word)
 
 # # Deleting everything
 # for number in range(0, 151):
