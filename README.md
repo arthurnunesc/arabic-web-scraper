@@ -27,6 +27,8 @@ Python web-scraper written for the [Arabic.fi](https://arabic.fi/) website. It f
   - Changes string encoding to UTF-8, inverting the text as needed.
 - PyArabic
   - Used to strip diacritics from the arabic words.
+- SQLite3
+  - Used to store the data fetched.
 
 
 ## To-do
