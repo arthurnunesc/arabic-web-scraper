@@ -1,6 +1,6 @@
-# arabic-web-scraper
+# arabicfi-scraper
 
-Python web-scraper written for the [Arabic.fi](https://arabic.fi/) website. It fetches information from words through the [random word link](https://arabic.fi/random-word) provided by the website.
+Python web-scraper written for the [Arabic.fi](https://arabic.fi/) website. It fetches and compiles the details of Arabic words provided by the website.
 
 ## Information fetched
 
@@ -9,7 +9,7 @@ Python web-scraper written for the [Arabic.fi](https://arabic.fi/) website. It f
 - Pronunciation(Romanized)
 - Meaning
 - Declension
-- Pronunciation audio example(As a link)
+- Pronunciation audio(As a link)
 - Part of speech
 - Pattern
 - Word link(ex: https://arabic.fi/words/3559)
