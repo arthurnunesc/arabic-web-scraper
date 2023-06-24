@@ -1,5 +1,5 @@
-import arabicfi_scraper
-import arabicfi_database
+import scraper
+import database_connector
 import time
 
 
@@ -42,7 +42,7 @@ import time
 # print("Execution time:", elapsed_time, "seconds")
 
 # For DEBUGGING
-word = arabicfi_scraper.get_word_info(3338)
+word = scraper.get_word_info(3338)
 print(word)
 
 # # Deleting everything
